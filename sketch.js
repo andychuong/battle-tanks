@@ -16,11 +16,14 @@ function draw() {
 	fill('black');
 	noStroke();
 
-	x = map(sensor1, 0, 1023, 20, windowWidth-20);
-	y = map(sensor2, 0, 915, 20, windowHeight-20);
+	x = map(sensor1, 0, 1023, 20, windowWidth-60);
+	y = map(sensor2, 0, 915, 20, windowHeight-60);
+
+	sizeX = map(x,60,windowWidth-60,40,120);
+	sizeY = map(y,60,windowHeight-60,40,120);
 
 	// ellipse(width/2, height/2, sensor1 + 20, sensor2);
-	ellipse(x,y,40,40);
+	ellipse(x,y,sizeX,sizeY);
 	// sensor 1: 0-1023
 	// sensor 2: 0-915
 
@@ -32,7 +35,6 @@ function mouseClicked(){
 	//send brightness to the server!
 	socket.emit('led', brightness);
 	console.log(brightness);
-
 
 }
 
