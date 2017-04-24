@@ -47,7 +47,7 @@ function updateValues(){
 			console.log(x1);
 		}
 	}
-	//Y1
+	// Y1
 	if(sensorY1 > 530){
 		if(y1 > 3){
 			y1-=3;
@@ -73,7 +73,7 @@ function updateValues(){
 			x2+=3;
 		}
 	}
-	//Y2
+	// Y2
 	if(sensorY2 > 530){
 		if(y2 > 3){
 			y2-=3;
