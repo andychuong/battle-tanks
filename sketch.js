@@ -8,9 +8,8 @@ var x1;
 var y1;
 var x2;
 var y2;
-
-
-// var brightness; // map brightness to mouse X
+var slider2;
+var rotation2;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
@@ -19,17 +18,25 @@ function setup() {
 	y1 = windowHeight/2;
 	x2 = windowWidth/2;
 	y2 = windowHeight/2;
+	testSprite = createSprite(400, 200, 50, 50);
+
 
 }
 
 function draw() {
 	background('white');
+	rotation2 = map(slider2, 0, 1023, 0, 360);
+	testSprite.rotation = rotation2;
+	testSprite.position.x = x2;
+	testSprite.position.y = y2;
+	console.log(testSprite.rotation);
+	drawSprites();
 	updateValues();
 	fill('blue');
 	noStroke();
-	rect(x1,y1,30,30);
+	// rect(x1,y1,30,30);
 	fill('red');
-	rect(x2,y2,30,30);
+	// rect(x2,y2,30,30);
 
 }
 
@@ -50,13 +57,13 @@ function updateValues(){
 	// Y1
 	if(sensorY1 > 530){
 		if(y1 > 3){
-			y1-=3;
+			y1+=3;
 			console.log(y1);
 		}
 	}
 	if(sensorY1 < 470){
 		if(y1 < windowHeight - 33){
-			y1+=3;
+			y1-=3;
 			console.log(y1);
 		}
 	}
@@ -76,13 +83,13 @@ function updateValues(){
 	// Y2
 	if(sensorY2 > 530){
 		if(y2 > 3){
-			y2-=3;
+			y2+=3;
 			console.log(y2);
 		}
 	}
 	if(sensorY2 < 470){
 		if(y2 < windowHeight - 33){
-			y2+=3;
+			y2-=3;
 			// console.log(y1);
 		}
 	}

@@ -10,9 +10,8 @@
 
   <!-- P5  -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
-  <script src="librarires/sketch.js"></script>
-   <script src="libraries/p5.dom.js"></script>
-
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="libraries/p5.play.js" type="text/javascript"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
 
   <!-- SOCKET.IO  -->
@@ -34,9 +33,10 @@
       sensorX1 = Number(values[0]);
       sensorY1 = Number(values[1]);
       
-      sensorX2 = Number(values[2]);
-      sensorY2 = Number(values[3]);
+      sensorX2 = Number(values[3]);
+      sensorY2 = Number(values[4]);
 
+      slider2 = Number(values[6]);
 
     });
   </script>
