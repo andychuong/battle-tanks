@@ -2,13 +2,20 @@
 
 var sensorX1;
 var sensorY1;
-var sensorX2;
-var sensorY2;
+var sensorR1;
+var sensorS1;
+
 var x1;
 var y1;
+var rotation1;
+
+var sensorX2;
+var sensorY2;
+var sensorR2;
+var sensorS2;
+
 var x2;
 var y2;
-var slider2;
 var rotation2;
 
 function setup() {
@@ -18,24 +25,33 @@ function setup() {
 	y1 = windowHeight/2;
 	x2 = windowWidth/2;
 	y2 = windowHeight/2;
-	testSprite = createSprite(400, 200, 50, 50);
+	player1 = createSprite(400, 200, 50, 50);
+	player1.shapeColor = 'blue';
+	player2 = createSprite(400, 200, 50, 50);
+	player2.shapeColor = 'red';
 
 
 }
 
 function draw() {
 	background('white');
-	rotation2 = map(slider2, 0, 1023, 0, 360);
-	testSprite.rotation = rotation2;
-	testSprite.position.x = x2;
-	testSprite.position.y = y2;
-	console.log(testSprite.rotation);
+
+	rotation1 = map(sensorR1, 0, 1023, 0, 360);
+	player1.rotation = rotation1;
+	player1.position.x = x1;
+	player1.position.y = y1;
+
+	rotation2 = map(sensorR2, 0, 1023, 0, 360);
+	player2.rotation = rotation2;
+	player2.position.x = x2;
+	player2.position.y = y2;
+	// console.log(testSprite.rotation);
 	drawSprites();
 	updateValues();
-	fill('blue');
-	noStroke();
+	// fill('blue');
+	// noStroke();
 	// rect(x1,y1,30,30);
-	fill('red');
+	// fill('red');
 	// rect(x2,y2,30,30);
 
 }
