@@ -30,17 +30,18 @@
 
       //split it
       var values = split(data, ",");
-      sensorX1 = Number(values[0]);
-      sensorY1 = Number(values[1]);
-      sensorR1 = Number(values[2]);
-      sensorS1 = Number(values[3]);
+
+      // Player 1
+      sensorX1 = Number(values[0]); // Horizontal - Left and Right (0-1023)
+      sensorY1 = Number(values[1]); // Verticle - Up and Down (0-1023)
+      sensorR1 = Number(values[2]); // Rotation (0-1023) -> Mapped (0-360)
+      sensorS1 = Number(values[3]); // Select - Joystick Down (0-1)
       
+      // Player 2
       sensorX2 = Number(values[4]);
       sensorY2 = Number(values[5]);
       sensorR2 = Number(values[6]);
       sensorS2 = Number(values[7]);
-
-
 
     });
   </script>

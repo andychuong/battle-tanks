@@ -75,7 +75,7 @@ var SerialPort = serialport.SerialPort; // make a local instance of it
 
 // get port name from the command line:
 // SET THIS TO YOUR OWN PORT
-var portName = '/dev/cu.usbserial-DN00MTQI';
+var portName = '/dev/cu.usbmodemHIDP1';
 
 //then actually open th eport
 var myPort = new SerialPort(portName, {
