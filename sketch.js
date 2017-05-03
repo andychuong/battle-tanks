@@ -73,7 +73,7 @@ function setup() {
 }
 
 function draw() {
-	console.log(gameState);
+	// console.log(gameState);
 	// GAME STATE 0 ----- START SCREEN ----- ----- 
 	if(gameState == 0){
 		background('white');
@@ -103,15 +103,27 @@ function draw() {
 		image(blueTank, 210, windowHeight - 300);
 		image(greenTank2, windowWidth-280, windowHeight - 300);
 
+		if(points1 != 0 || points2 != 0){
+			points1 = 0;
+			points2 = 0;
+			ready1 = false;
+			ready2 = false;
+			// console.log(points2);
+			// console.log(points1);
+		}
 
 		if(ready1){
 			text("Player 1: Ready!", 120, windowHeight - 200);
+			// console.log("ready1");
 		}
 		if(ready2){
 			text("Player 2: Ready!", windowWidth - 360, windowHeight - 200);
+			// console.log("ready2");
 		}
 
 		// rect(windowWidth/2 - 2, 0, 4, windowHeight);
+		// console.log(ready1);c
+		// console.log(ready2);
 
 		if(sensorS1 == 1){
 			ready1 = true;
@@ -153,7 +165,7 @@ function draw() {
 		// Player 1 Shooting
 		if(keyWentDown("x")){
 			// console.log('x');
-	   		var bullet1 = createSprite(player1.position.x, player1.position.y, 6, 4);
+	   		var bullet1 = createSprite(player1.position.x, player1.position.y, 10, 10);
 	    	bullet1.setSpeed(10+player1.getSpeed(), player1.rotation);
 	    	bullet1.life = 160;
 	    	bullet1.shapeColor = 'black';
@@ -167,7 +179,7 @@ function draw() {
 		// Player 2 Shooting
 	    if(keyWentDown("c")){
 	    	// console.log('c pressed');
-	   		var bullet2 = createSprite(player2.position.x, player2.position.y, 6, 4);
+	   		var bullet2 = createSprite(player2.position.x, player2.position.y, 10, 10);
 	    	bullet2.setSpeed(10+player2.getSpeed(), player2.rotation);
 	    	bullet2.life = 160;
 	    	bullet2.shapeColor = 'black';
@@ -195,6 +207,7 @@ function draw() {
 
 		if(points1 == wins || points2 == wins){
 			gameState = 2;
+
 		}
 
 		// Update Values
@@ -236,16 +249,17 @@ function draw() {
 		if(sensorS1 == 1){
 			ready1 = false;
 		}
-		if(sensorS2 = 1){
+		if(sensorS2 == 1){
 			ready2 = false;
 		}
 
 		if(ready1 == false || ready2 == false){
-			gameState = 0;
+			// console.log(points1);
+			// console.log(points2);
 			ready1 = false;
 			ready2 = false;
-			points1 = 0;
-			points2 = 0;
+			gameState = 0;
+			
 		}
 	}
 
