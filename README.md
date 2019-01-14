@@ -12,6 +12,10 @@
  - Shoot the opposite player while dodging your opponent's projectiles
  - First player to remove all their opponent's hearts wins the game
  
+ [Gameplay Video](https://vimeo.com/247840673)
+ 
+ ![Gameplay Screenshot](https://chuongtam.files.wordpress.com/2017/05/screen-shot-2017-05-03-at-2-51-24-am.png?w=1512)
+ 
  ## Technologies
  
  - HTML | CSS
@@ -26,5 +30,7 @@
   - Arduino Leonardo
   - [Joystick](https://www.sparkfun.com/products/9032) with [Breakout board](https://www.sparkfun.com/products/9110)
   - [Slider Potentiometer](https://www.sparkfun.com/products/11621)
+  
+  ![Controllers Image](https://chuongtam.files.wordpress.com/2017/05/img_3205.jpg?w=2800&h=)
  
  
