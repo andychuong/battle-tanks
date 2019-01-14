@@ -24,7 +24,7 @@
  ## Hardware
  
   - Arduino Leonardo
-  - [https://www.sparkfun.com/products/9032](Joystick) with [https://www.sparkfun.com/products/9110](Breakout board)
-  - [https://www.sparkfun.com/products/11621](Slider Potentiometer)
+  - [Joystick](https://www.sparkfun.com/products/9032) with [Breakout board](https://www.sparkfun.com/products/9110)
+  - [Slider Potentiometer](https://www.sparkfun.com/products/11621)
  
  
