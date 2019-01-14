@@ -32,5 +32,6 @@
   - [Slider Potentiometer](https://www.sparkfun.com/products/11621)
   
   ![Controllers Image](https://chuongtam.files.wordpress.com/2017/05/img_3205.jpg?w=2800&h=)
+  ![Complete Image Setup](https://chuongtam.files.wordpress.com/2017/05/img_3208.jpg?w=1209&h=&zoom=2)
  
  
