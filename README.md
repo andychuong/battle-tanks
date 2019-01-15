@@ -27,7 +27,7 @@
  
  ## Hardware
  
-  - Arduino Leonardo
+  - [Arduino Leonardo](https://store.arduino.cc/usa/arduino-leonardo-with-headers)
   - [Joystick](https://www.sparkfun.com/products/9032) with [Breakout board](https://www.sparkfun.com/products/9110)
   - [Slider Potentiometer](https://www.sparkfun.com/products/11621)
   
