@@ -21,7 +21,7 @@
  - HTML | CSS
  - Javascript
  - Node.js
- - p5.js
+ - p5.js | p5.play
  - sockets.io
  - Arduino
  
